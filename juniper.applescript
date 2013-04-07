@@ -26,7 +26,7 @@ on run argv
 			quit
 		else
 			connect to gatewayHostName
-			delay 3
+			delay 5
 			tell application "System Events"
 				set value of text field 1 of group 6 of UI element 1 of scroll area 1 of window appName of application process appName to username
 				set value of text field 1 of group 9 of UI element 1 of scroll area 1 of window appName of application process appName to pw
