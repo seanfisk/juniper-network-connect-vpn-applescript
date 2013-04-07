@@ -16,6 +16,10 @@ Create a `bin` directory for yourself if you don't already have it, and add it t
     mkdir ~/bin
     echo 'export PATH=~/bin:"$PATH"' >> ~/.bashrc
 
+Reload your shell (assuming bash) so these modifications take effect:
+
+    exec bash
+
 Next, download the script:
 
     curl https://raw.github.com/seanfisk/juniper-network-connect-vpn-applescript/master/juniper.applescript > ~/bin/juniper
@@ -35,10 +39,29 @@ The script will detect whether you are connected to the VPN. If not connected, i
 The previous instructions get it working, but don't really automate much. I wanted to be able to log in to the VPN by simply typing `vpn` at the terminal. I don't type passwords for websites or SSH, so I shouldn't have to type it for a VPN either. Add this shell function to your `.bashrc` to complete the configuration:
 
     vpn () {
-	  juniper my.gateway.example.com myusername mypassword &
+      juniper my.gateway.example.com myusername mypassword &
     }
 
 It is backgrounded so you don't have to wait for the delay and get your shell back immediately.
+
+Those who are security-minded may not like embedding their password directly into a shell function. If so, you can use `read` to get the password.
+
+### Bash
+
+    vpn () {
+      # -s: silent, turn off echo
+      # -p: prompt
+      read -sp 'VPN Password: ' password
+      juniper my.gateway.example.com myusername "$password" &
+    }
+
+### Zsh
+
+    vpn () {
+      # -s: silent, turn off echo
+      read -s 'password?VPN Password: '
+      juniper my.gateway.example.com myusername "$password" &
+    }
 
 ## GVSU
 
