@@ -2,14 +2,14 @@
 
 ![Screenshot](http://seanfisk.github.io/juniper-network-connect-vpn-applescript/screenshot.png)
 
-This is a script that will assist you in automating your VPN connection using Network Connect by [Juniper Networks][juniper]. It was designed for VPN access at [Grand Valley State University][gvsu], but contains nothing GVSU-specific. It should hopefully work for all versions of Network Connect on Mac OS X, but it has tested on GVSU's student VPN with Mac OS 10.6 Snow Leopard, Network Connect version 7.1.10 (21187).
+This is a script that will assist you in automating your VPN connection using Network Connect by [Juniper Networks][juniper]. It was designed for VPN access at [Grand Valley State University][gvsu], but contains nothing GVSU-specific. It should work for all versions of Network Connect on Mac OS X 10.6+, but it has been tested on GVSU's student VPN with Mac OS 10.6 Snow Leopard, Network Connect version 7.1.10 (21187).
 
 [juniper]: http://www.juniper.net
 [gvsu]: http://gvsu.edu/
 
 ## Recommended Installation
 
-There are a number of ways to use this AppleScript. This is the way I recommend.
+There are a number of ways to use this AppleScript. This is what I recommend.
 
 Create a `bin` directory for yourself if you don't already have it, and add it to your `PATH`:
 
@@ -44,7 +44,7 @@ The previous instructions get it working, but don't really automate much. I want
 
 It is backgrounded so you don't have to wait for the delay and get your shell back immediately.
 
-Those who are security-minded may not like embedding their password directly into a shell function. If so, you can use `read` to get the password.
+Those who are security-minded may not like embedding their password directly into a shell function. If that describes you, you can use `read` to get the password instead:
 
 ### Bash
 
@@ -65,7 +65,7 @@ Those who are security-minded may not like embedding their password directly int
 
 ## GVSU
 
-As mentioned, this was created for use with GVSU's VPN. If you are a GVSU user, please use these command lines.
+As mentioned, this was created for use with GVSU's VPN. If you are a GVSU user, please use the following sample command-lines:
 
 ### Student
 
@@ -93,4 +93,4 @@ I also used a script from Macworld to help determine the "addresses" of the UI f
 
 * <http://hints.macworld.com/article.php?story=20111208191312748>
 
-That script is also committed as `dumpobjects.applescript`.
+That script is committed in the repository as `dumpobjects.applescript`.
