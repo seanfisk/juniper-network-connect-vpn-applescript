@@ -1,6 +1,6 @@
 # Automated Juniper Network Connect VPN AppleScript
 
-![Screenshot](https://seanfisk.github.com/juniper-network-connect-vpn-applescript)
+![Screenshot](http://seanfisk.github.io/juniper-network-connect-vpn-applescript/screenshot.png)
 
 This is a script that will assist you in automating your VPN connection using Network Connect by [Juniper Networks][juniper]. It was designed for VPN access at [Grand Valley State University][gvsu], but contains nothing GVSU-specific. It should hopefully work for all versions of Network Connect on Mac OS X, but it has tested on GVSU's student VPN with Mac OS 10.6 Snow Leopard, Network Connect version 7.1.10 (21187).
 
