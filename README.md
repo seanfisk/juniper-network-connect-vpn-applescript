@@ -82,6 +82,10 @@ See more about connecting in the [GVSU VPN guide for faculty][vpn-faculty].
 [vpn-student]: http://www.gvsu.edu/cms3/assets/428A2C9A-0FB7-5B0C-BBFCF723C12E59E3/VPN-AccessforGVSUStudents.pdf
 [vpn-faculty]: http://www.gvsu.edu/cms3/assets/FCC6FA7C-C5D2-3528-127B6819D54A9210/pdfs/network/vpn_connection_gvsu_machine.pdf
 
+## But I use Windows or GNU/Linux!
+
+I believe that Network Connect is scriptable on these operating systems, i.e., it has a command-line interface. I cannot confirm that yet. For some reason, on Mac OS X, Juniper decided not to give us this interface. Boo. That is what this AppleScript is designed to solve.
+
 ## Credits
 
 This AppleScript drew from two other scripts created for this purpose:
